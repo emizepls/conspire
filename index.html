@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conspire Website</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <!-- Fixed Left Navigation -->
+    <nav class="nav-container">
+        <div class="nav-title">conspire<span class="nav-subtitle">conspirenyc@proton.me</span></div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#future" class="nav-link active" data-section="future">future</a>
+            </li>
+            <li class="nav-item">
+                <a href="#past" class="nav-link" data-section="past">past</a>
+            </li>
+            <li class="nav-item">
+                <a href="#present" class="nav-link" data-section="present">present</a>
+            </li>
+            <li class="nav-item">
+                <a href="#forever" class="nav-link" data-section="forever">forever</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Future Section -->
+        <section id="future" class="content-section active">
+                <div class = "event">
+                    <p2>9.27.25</p>
+                    <h5>Lecture: Breaking the Grid, Noise in Rhythm</p>
+                    <p>Raz Mesinai</p>
+                    </div>
+                <div class = "event">
+                    <p2>9.30.25</p>
+                    <h5>somantic collage workshop</p>
+                    <p>by sierra enea </p>
+                </div>
+                <div class = "event">
+                    <p2>10.11.25</p>
+                    <h5>SILLAGE</p>
+                    <p>TBA</p>
+                </div>
+                <div class = "event">
+                    <p2>10.18.25</p>
+                    <h5>heat index vol. 2</p>
+                    <p>azumi OE, kimie parker, bongo wattz, lot.te, marteka fair</p>
+                </div>
+                <div class = "event">
+                    <p2>10.25.25</p>
+                    <h5>Supraliminal</p>
+                    <p>TBA </p>
+                </div>
+                <div class = "past-event">
+                    <p2>7.11.25</p>
+                    <h5>SATNAM</p>
+                    <p>luis verdin & will feeney, emize @ sierrafrancesca, martha & easterner </p>
+                </div>
+                <div class = "past-event">
+                    <p2>7.12.25</p>
+                    <h5>SATNAM</p>
+                    <p>nev kundacina, astou diagne, emize, badawi, aunty jay </p>
+                </div>
+                <div class = "past-event">
+                    <p2>7.12.25</p>
+                    <h5>SILLAGE</p>
+                    <p>8ulentina, NANA XOXO, rohana, doula, letter z</p>
+                </div>
+                <div class = "past-event">
+                    <p2>7.19.25</p>
+                    <h5>&FRIENDS</p>
+                    <p>martha & easterner, erin wadjufos </p>
+                </div>
+                <div class = "past-event">
+                    <p2>6.26.25</p>
+                    <h5>modular synthesis workshop</p>
+                    <p>princess jalbari, luwan, oni/p>
+                </div>
+                <div class = "past-event">
+                    <p2>6.24.25</p>
+                    <h5>somatic collage workshop</p>
+                    <p>sierra enea/p>
+                </div>
+                <div class = "past-event">
+                    <p2>6.20.25</p>
+                    <h5>heat index vol. 1</p>
+                    <p>princess jalbari, luwan, oni/p>
+                </div>
+        </section>
+
+        <!-- Past Section -->
+        <section id="past" class="content-section">
+            <div class="section-content">
+                <div class = "event">
+                    <p2>Milford Graves</p>
+                    <h5>Full Mantis</p>
+                    <p>beyond the grid, bpms, body rhythm</p>
+                </div>
+                <div class = "event">
+                    <p2>Badawi</p>
+                    <h5>Dismantling Western Imperialim at All Costs</p>
+                    <p>1992</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Present Section -->
+        <section id="present" class="content-section">
+            <div class="section-content">
+                <img src="images/present.png" alt="Present placeholder" class="present-image">
+                <p>conspire stream incoming</p>
+            </div>
+        </section>
+
+        <!-- Forever Section -->
+        <section id="forever" class="content-section">
+            <div class="section-content">
+                <p>conspire (v. to breathe together) is an intergenerational art oasis in bedstuy built for qtpoc femme minds and spirits to expand endlessly. the space is dedicated to amplifying life-affirming and experimental artistic expression. long before the entertainment industry and art industrial complex, the artist was the village healer. our gatherings, practices, and governance are communal. 
+<br>
+<br>
+                    we are building alternative art and worker-owned infrastructure that provides performance space, practice space, learning forums, and resources for the artist community that actively resists existing power structures. 
+                    <br>      
+                    <br>
+                    our programming includes alternative higher education, idea exchange, experimental shows, our own archive, label, political organizing, and radio / self-streaming, screenings. 
+                    <br>     
+                    <br>
+                    our intergenerational collective consists of queer sound artists, metal workers, djs, beekeepers, archivists, sculptors, visual artists. our entire sound system and lighting system is built by an all queer femme technologist team. 
+                    <br>
+                    <br>
+                    towards queer infinity
+                    </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links and sections
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    contentSections.forEach(s => s.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Show corresponding section
+                    const targetSection = this.getAttribute('data-section');
+                    const section = document.getElementById(targetSection);
+                    if (section) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
